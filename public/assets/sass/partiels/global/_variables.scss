@@ -1,14 +1,14 @@
 // ========================================================================
 // Colors
 // ========================================================================
-$color-bg: #1a1414 !default;
+$color-bg: #141619 !default;
 // $color-bg-dark: #1a1414 !default;
-$color-primary: #96312b !default;
-$color-secondary: #c63f34 !default; 
-$color-primary-gradient: linear-gradient(169deg, #862c26 0%, #96312b 100%);
-// $color-tertiary: #f0f8ff !default;
+$color-primary: rgb(200, 63, 52) !default;
+$color-secondary: rgb(150, 49, 43) !default; 
+$color-tertiary: #3f4944 !default;
+$color-primary-gradient: linear-gradient(169deg, rgb(134, 44, 38) 0%, rgb(150, 49, 43) 100%);
 $color-white: #FFFFF0 !default;
-$color-black: #1a1414 !default;
+$color-black: #141619 !default;
 $color-infinit-heandband: #FFFFF0 !default;
 $color-navbar: #ffffff31 !default;
 $color-hamburger: #ffffffdb !default;

@@ -7,7 +7,7 @@
     <meta name="description" content="<?= $description_page ?? ''; ?>">
     <meta name="keywords" content="">
     <!-- <link rel="canonical" href="http://rnday.ofni.asso.fr/" /> -->
-    <link rel="shortcut icon" type="image/icon" href="./assets/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="image/icon" href="./assets/favicon/favicon.jpeg"/>
     <link rel="meta" type="application/json" href="./meta.json">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title><?= $title.' - '.$title_page ?? ''; ?></title>
@@ -59,7 +59,7 @@
                 
                 <!-- Logo -->
                 <a href="./index.php" class="nav-icon" aria-label="Visit homepage" aria-current="page">
-                    <img src="./assets/favicon/favicon.ico" alt="Web site icon" width="40">
+                    <img src="./assets/favicon/favicon.jpeg" alt="Web site icon" width="40">
                     <span><?= $title; ?></span>
                 </a>
 
@@ -74,9 +74,11 @@
 
                 <!-- Navigation links -->
                 <div class="navlinks-container">
-                    <a href="./index.php" aria-current="page">Accueil</a>
-                    <a href="./index.php">Informations</a>
-                    <a href="./index.php">Intervenant</a>
+                    <!-- <a href="./index.php" aria-current="page">Accueil</a> -->
+                    <a href="./portfolio.php">Portfolio</a>
+                    <a href="./about.php">À propos</a>
+                    <a href="./blog.php">Blog</a>
+                    <a href="./contact.php">Contact</a>
                 </div>
             </div>
         </nav>

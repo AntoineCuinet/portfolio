@@ -39,7 +39,7 @@ nav {
 
             span {
                 font-family: sans-serif;
-                transform: translateY(3px);
+                transform: translateY(1px);
                 font-size: $size-logo-text;
                 margin-left: 10px;
                 font-weight: $font-weight-ber;
@@ -142,13 +142,14 @@ nav {
             }
 
             a {
+                transform: translateY(1px);
                 display: inline-block;
                 position: relative;
                 margin: 0 rem(10);
                 font-size: $size-hamburger;
                 font-weight: $font-weight-ber;
                 text-decoration: none;
-                color: $color-font;
+                color: $color-font-dark;
 
                 @media #{$max-width-s} {
                     font-size: $size-hamburger;
@@ -156,8 +157,13 @@ nav {
                     color: $color-font;
                 }
 
-                &:nth-child(1) {
-                    color: $color-black;
+                // &:first-child {
+                //     color: $color-white;
+                // }
+
+                &:last-child {
+                    color: $color-primary;
+                    //TODO: btn à faire
                 }
 
                 &::after { // hover animation
@@ -169,7 +175,7 @@ nav {
                     height: rem(3);
                     transform: scale(0);
                     transform-origin: left;
-                    background: $color-black;
+                    background: $color-font-dark;
                     transition: transform 0.3s ease-out;
 
                     @media #{$max-width-s} {

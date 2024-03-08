@@ -1,5 +1,3 @@
-
-
 </main>
 
 <!-- btn pour remonter en haut du site -->
@@ -9,43 +7,46 @@
 
 
 <footer>
-    <div class="contenu-footer">
-        <div class="bloc footer-info">
+    <div class="footer-container">
+        <div class="bloc">
             <h3>Informations</h3>
             <ul>
-                <li><p><span>Lieu:</span> Université de Franche-Comté, Besançon</p></li>
-                <li><p><span>Jour:</span> mercredi 13 mars 2024</p></li>
-                <li><p><span>Horaires:</span> de 14h à 18h</p></li>
-            </ul>
-        </div>
-        
-        <div class="bloc footer-sponsor">
-            <h3>Nos Sponsors</h3>
-            <ul>
-                <li><a class="link-light" href="https://www.univ-fcomte.fr/" target="_blank">Université de Franche-comté</a></li>
-                <li><a class="link-light" href="https://ofni.asso.fr/" target="_blank">Association OFNI</a></li>
+                <li>
+                    <p><span>Lieu: </span>25000 Besançon</p>
+                </li>
+                <li>
+                    <p><span>Email: </span><a href="mailto:antoine.cuinet70200@gmail.com?subject=Demande%20de%20création%20de%20site%20web&body=Bonjour%2C%20%0D%0A%0D%0AJe%20vous%20contacte%20pour...">antoine.cuinet70200@gmail.com</a></p>
+                </li>
+                <li>
+                    <p><span>Téléphone: </span><a href="tel:+33625330842">06 25 33 08 42</a></p>
+                </li>
             </ul>
         </div>
 
-        <div class="bloc footer-mention">
-            <h3>À propos</h3>
+        <div class="bloc">
+            <h3>Liens pratiques</h3>
             <ul>
-                <li><a class="link-light" href="./mentions.php">Mentions légales</a></li>
-                <li><a class="link-light" href="./cookies.php">Cookies</a></li>
+                <li><a href="./portfolio.php">Portfolio</a></li>
+                <li><a href="./about.php">À propos</a></li>
+                <li><a href="./blog.php">Blog</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./legal.php">Mentions légales</a></li>
             </ul>
-            <a class="link-light" class="lens-container" href="https://www.instagram.com/rnday_info?igsh=am0yam5yYXo1eDNq&utm_source=qr" target="_blank">
-                <div class="button-lens">
-                    <div class="icon-lens">
-                        <i class='bx bxl-instagram'></i>
-                    </div>
-                    <span class="insta">Instagram -></span>
-                </div>
-            </a>
+        </div>
+
+        <div class="bloc">
+            <h3>Réseaux</h3>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
         </div>
     </div>
+    <div class="footer-legal"><p>&copy; 2024 - CUINET - Tous droits réservés</p></div>
 </footer>
 
 <!-- script.js -->
 <script src="./script.js"></script>
 </body>
+
 </html>

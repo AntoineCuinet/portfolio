@@ -6,7 +6,7 @@ footer {
     background: $color-primary-gradient;
     color: $color-font;
 
-    .contenu-footer {
+    .footer-container {
         max-width: $breakpoint-large;
         margin: 0 auto;
         display: flex;
@@ -22,8 +22,9 @@ footer {
         }
 
         .bloc {
-            width: 25%;
+            width: 30%;
             margin: 0 rem(30);
+            text-align: center;
 
             @media #{$max-width-s} {
                 width: 80%;
@@ -61,5 +62,10 @@ footer {
                 }
             }
         }   
+    }
+
+    .footer-legal {
+        margin: 10px auto;
+        text-align: center;
     }
 }
