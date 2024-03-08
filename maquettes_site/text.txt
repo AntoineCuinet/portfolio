@@ -1,4 +1,16 @@
 
+colors: 
+    bg:
+    secondary:
+    tertiary:
+    white:
+    black:
+
+
+
+
+
+
 Navigation
     Accueil
     Portfolio (contient les projets réalisés)

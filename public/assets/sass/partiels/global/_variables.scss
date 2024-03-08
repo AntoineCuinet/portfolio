@@ -1,25 +1,26 @@
 // ========================================================================
 // Colors
 // ========================================================================
-$color-bg: #306ff6 !default;
-$color-bg-dark: #000 !default;
-$color-primary: #0000ff !default;
-$color-secondary: #206295 !default;
-$color-tertiary: #f0f8ff !default;
-$color-white: #fff !default;
-$color-black: #000 !default;
-$color-infinit-heandband: #fff !default;
+$color-bg: #1a1414 !default;
+// $color-bg-dark: #1a1414 !default;
+$color-primary: #96312b !default;
+$color-secondary: #c63f34 !default; 
+$color-primary-gradient: linear-gradient(169deg, #862c26 0%, #96312b 100%);
+// $color-tertiary: #f0f8ff !default;
+$color-white: #FFFFF0 !default;
+$color-black: #1a1414 !default;
+$color-infinit-heandband: #FFFFF0 !default;
 $color-navbar: #ffffff31 !default;
 $color-hamburger: #ffffffdb !default;
-$color-hamburger-dark: #c0c0c0e3 !default;
+// $color-hamburger-dark: #c0c0c0e3 !default;
 
 $color-font: #333 !default;
-$color-font-dark: #c0c0c0 !default;
+$color-font-dark: #abadaf !default;
 $color-font-selection: #004d95 !default;
 $color-link: #491aa9 !default;
 $color-link-hover: #865cd9 !default;
-$color-danger: #8b1818 !default;
-$color-danger-hover: #ff0040 !default;
+$color-danger: #96312b !default;
+$color-danger-hover: #c63f34 !default;
 
 $box-shadow: 0 2px 6px #00000052;
 $box-shadow-right: 4px 0px 6px -2px #0000001a;
@@ -54,7 +55,7 @@ $size-404-phone: 35px;
 // ========================================================================
 // Breakpoints - Layout
 // ========================================================================
-$breakpoint-small: 720px !default;
+$breakpoint-small: 800px !default;
 $breakpoint-medium: 960px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1600px !default;
