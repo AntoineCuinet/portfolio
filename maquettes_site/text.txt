@@ -1,0 +1,48 @@
+
+Navigation
+    Accueil
+    Portfolio (contient les projets réalisés)
+    À propos (Compétences + CV)
+    Blog (optionnel)
+    Contact (formulaire)
+
+Footer
+    Contact
+    Réseaux sociaux
+    Mentions légales
+
+
+Accueil
+    Une brève présentation de vous-même et de l'objectif de votre portfolio.
+    Possibilité d'inclure une photo de vous-même ou un logo personnel.
+
+À propos
+    Une section où vous pouvez détailler votre parcours professionnel, vos compétences, et ce qui vous motive dans le domaine du développement web.
+    Vous pouvez également inclure des informations sur votre formation académique et vos expériences professionnelles pertinentes.
+
+Portfolio
+    Cette section devrait mettre en avant vos projets web les plus remarquables.
+    Chaque projet devrait avoir sa propre page ou section où vous expliquez le contexte du projet, les technologies utilisées, vos contributions et les résultats obtenus.
+    Il est recommandé d'inclure des captures d'écran ou des démos interactives de vos projets.
+
+CV
+    Une page dédiée à votre curriculum vitae.
+    Vous pouvez inclure une version téléchargeable de votre CV au format PDF ainsi qu'une version textuelle pour ceux qui préfèrent la consulter en ligne.
+
+Compétences
+    Une liste détaillée de vos compétences techniques et professionnelles.
+    Vous pouvez les organiser par catégories (par exemple, langages de programmation, frameworks, outils de développement, etc.).
+
+Blog (optionnel)
+    Si vous prévoyez de partager des articles ou des tutoriels liés au développement web, vous pouvez inclure une section de blog.
+    Cela vous permettra de démontrer votre expertise et votre passion pour le domaine.
+
+Contact
+    Un formulaire de contact permettant aux visiteurs de vous envoyer des messages directement depuis votre site.
+    Vous pouvez également inclure vos coordonnées professionnelles (adresse e-mail, numéro de téléphone) si vous êtes à l'aise avec cela.
+
+Réseaux sociaux
+    Des liens vers vos profils sur les réseaux sociaux professionnels (comme LinkedIn, GitHub, etc.) où les visiteurs peuvent en apprendre davantage sur votre travail et interagir avec vous.
+
+Mentions légales
+    Une page où vous précisez les mentions légales, les conditions d'utilisation et la politique de confidentialité de votre site web, conformément aux réglementations en vigueur.

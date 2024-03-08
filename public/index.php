@@ -1,12 +1,12 @@
 <?php //require('./assets/pages/db.php'); 
 
-$title = 'Tempate';
+$title = 'CUINET';
 $title_page = 'Accueil';
 $description_page = 'Page d\'accueuil';
 
 include('./assets/views/header.php');
 
-echo <<<HTML
+echo <<<'HTML'
     <section>
         <h1>Template</h1>
         <br>
