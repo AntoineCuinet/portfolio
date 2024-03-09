@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="./portfolio.php">Portfolio</a></li>
                 <li><a href="./about.php">À propos</a></li>
-                <li><a href="./blog.php">Blog</a></li>
+                <!-- <li><a href="./blog.php">Blog</a></li> -->
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./legal.php">Mentions légales</a></li>
             </ul>

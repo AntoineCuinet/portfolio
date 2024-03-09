@@ -77,7 +77,7 @@
                     <!-- <a href="./index.php" aria-current="page">Accueil</a> -->
                     <a href="./portfolio.php">Portfolio</a>
                     <a href="./about.php">À propos</a>
-                    <a href="./blog.php">Blog</a>
+                    <!-- <a href="./blog.php">Blog</a> -->
                     <a href="./contact.php">Contact</a>
                 </div>
             </div>

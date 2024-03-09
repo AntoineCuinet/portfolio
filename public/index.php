@@ -6,23 +6,23 @@ $description_page = 'Page d\'accueuil';
 include('./assets/views/header.php');
 
 echo <<<'HTML'
-    <section>
-        <h1>Template</h1>
-        <h2>ANTOINE
+    <section class="landing-page">
+        <h1 id="first-title">ANTOINE
             <br>
             CUINET
-        </h2>
-        <br>
-        <p><a href="">coucou toi</a></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique vitae amet culpa exercitationem a molestias ipsam impedit facere optio ad.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique vitae amet culpa exercitationem a molestias ipsam impedit facere optio ad.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique vitae amet culpa exercitationem a molestias ipsam impedit facere optio ad.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique vitae amet culpa exercitationem a molestias ipsam impedit facere optio ad.</p>
-        <br>
+        </h1>
+        <h2>Hey, moi c'est Antoine !</h2>
+        <p class="synopsis">Bienvenue sur mon portfolio ! Je suis Antoine CUINET, un développeur web passionné, et je suis ravi de vous présenter mes réalisations et mon expertise dans le domaine du développement web.</p>
 
-        <img src="./assets/pictures/image_template.jpeg" alt="image template" width=300>
-        <br>
-        <button class="btn-danger">template</button>
+        <button class="btn-danger">Me contacter</button>
+    </section>
+
+
+    <section>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
     </section>
 HTML;
 

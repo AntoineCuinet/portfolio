@@ -48,7 +48,7 @@ h1 {
 
 html {
   scroll-behavior: smooth;
-  background-color: #141619;
+  background-color: rgb(7, 7, 7);
   color: #333;
   font-size: 100%;
   font-family: Arial, Courier, monospace;
@@ -75,46 +75,53 @@ header {
   justify-content: center;
 }
 
-section {
+.landing-page {
+  position: relative;
   padding: 200px 0 0 0;
+  min-height: 80vh;
   color: #FFFFF0;
   width: 100%;
   max-width: 1200px;
   margin: auto;
   text-align: center;
 }
-section h1 {
-  font-size: 1.125rem;
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  transform: rotate(10deg);
-}
-section h1::after {
-  content: "";
+.landing-page #first-title {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 1rem solid #FFFFF0;
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-  bottom: -1rem;
-  left: calc(50% - 1rem);
-}
-section h2 {
-  position: absolute;
-  right: 0;
   z-index: -1;
+  right: 3%;
+  top: 50vh;
   text-align: end;
-  padding-right: 40px;
-  font-size: 200px;
+  font-size: clamp(30px, 12vw, 150px);
   font-weight: bolder;
   line-height: 0.8;
-  color: #3f4944;
-  color: transparent;
-  text-shadow: 0 0 5px rgba(41, 49, 45, 0.727);
+  background: -webkit-linear-gradient(rgb(16, 16, 16), rgb(21, 21, 21));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+.landing-page h2 {
+  position: absolute;
+  left: 5%;
+  top: 30vh;
+}
+.landing-page .synopsis {
+  position: absolute;
+  top: 37vh;
+  padding: 0 45% 0 5%;
+  margin-top: 0;
+  color: #abadaf;
+}
+.landing-page button {
+  position: absolute;
+  top: 55vh;
+  left: 10%;
+}
+
 section p {
   font-size: 1rem;
   padding: 1rem 10%;
@@ -208,7 +215,7 @@ footer .footer-legal {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  background: #141619;
+  background: rgb(7, 7, 7);
   color: #333;
   font-size: 1.125rem;
   transition: opacity 0.4s ease-out;
