@@ -14,7 +14,7 @@ echo <<<'HTML'
         <h2>Hey, moi c'est Antoine !</h2>
         <p class="synopsis">Bienvenue sur mon portfolio ! Je suis Antoine CUINET, un développeur web passionné, et je suis ravi de vous présenter mes réalisations et mon expertise dans le domaine du développement web.</p>
 
-        <button class="btn-danger">Me contacter</button>
+        <a class="btn" href="./contact.php">Me contacter</a>
     </section>
 
 

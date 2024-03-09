@@ -1,28 +1,68 @@
 %btn {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-width: 150px;
+    width: 180px;
     font-size: $font-size-m;
-    padding: rem(5) rem(10);
-    border: 2px solid $color-black;
-    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    padding: rem(15) 0;
+    border: 2px solid $color-primary;
+    border-radius: 45px;
     text-decoration: none;
-    transition: $transition;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out 0s;
+
+    &:before {
+        content: "\2192";
+        font-family: FontAwesome;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 40px;
+        transition: all 0.2s ease-out 0s;
+      }
+      
+      &:hover {
+        text-indent: -20px;
+        
+        &:before {
+          opacity: 1;
+          text-indent: 0px;
+        }
+      }
 }
 
 .btn {
     @extend %btn;
-    background: $color-primary;
-    color: $color-white;
+    background: transparent;
+    color: $color-primary;
 
     &:hover {
-        background: $color-secondary;
+        background: $color-primary;
+        color: $color-bg;
     }
 }
 
 .btn-danger {
     @extend %btn;
-    background: $color-danger;
-    color: $color-white;
+    background: transparent;
+    color: $color-primary;
 
     &:hover {
-        background: $color-danger-hover;
+        background: $color-primary;
+        color: $color-bg;
     }
 }

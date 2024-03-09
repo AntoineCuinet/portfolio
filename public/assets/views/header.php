@@ -35,6 +35,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -78,7 +81,7 @@
                     <a href="./portfolio.php">Portfolio</a>
                     <a href="./about.php">À propos</a>
                     <!-- <a href="./blog.php">Blog</a> -->
-                    <a href="./contact.php">Contact</a>
+                    <a class="btn" href="./contact.php">Contact</a>
                 </div>
             </div>
         </nav>
