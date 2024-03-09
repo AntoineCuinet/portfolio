@@ -48,11 +48,11 @@
 .btn {
     @extend %btn;
     background: transparent;
-    color: $color-primary;
+    color: $color-primary !important;
 
     &:hover {
         background: $color-primary;
-        color: $color-bg;
+        color: $color-bg !important;
     }
 }
 

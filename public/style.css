@@ -520,24 +520,40 @@ nav .first-container .navlinks-container a:hover::after {
   z-index: 4;
 }
 
-.link-light, a {
-  color: #FFFFF0;
-  text-decoration: underline;
+.footer-links {
+  color: #333;
+  text-decoration: none;
   transition: 0.3s ease-out;
   font-size: 1rem;
 }
 @media screen and (max-width: 800px) {
-  .link-light, a {
+  .footer-links {
     font-size: 0.75rem;
   }
 }
+.footer-links:visited {
+  color: #333;
+}
 
-a:hover {
+.text-links {
+  color: #abadaf;
+  text-decoration: none;
+  background-image: linear-gradient(transparent calc(50% - 5px), rgba(200, 62, 52, 0.5) calc(50% - 5px));
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: all 0.3s ease-out 0s;
+}
+.text-links:hover {
+  color: #abadaf;
+  background-image: linear-gradient(transparent calc(50% - 5px), rgba(200, 62, 52, 0.75) calc(50% - 5px));
+  background-position: 0 100%;
+}
+.text-links:visited {
   color: #abadaf;
 }
 
-.link-light:hover {
-  color: #141619;
+.footer-links:hover {
+  color: #abadaf;
 }
 
 .btn-danger, .btn {
@@ -586,11 +602,11 @@ a:hover {
 
 .btn {
   background: transparent;
-  color: rgb(200, 63, 52);
+  color: rgb(200, 63, 52) !important;
 }
 .btn:hover {
   background: rgb(200, 63, 52);
-  color: rgb(7, 7, 7);
+  color: rgb(7, 7, 7) !important;
 }
 
 .btn-danger {
