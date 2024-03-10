@@ -42,11 +42,24 @@
             </ul>
         </div>
     </div>
-    <div class="footer-legal"><p>&copy; 2024 - CUINET - Tous droits réservés</p></div>
+    <div class="footer-legal">
+        <p>&copy; 2024 - CUINET - Tous droits réservés</p>
+    </div>
 </footer>
 
 <!-- script.js -->
 <script src="./script.js"></script>
+<script type="text/javascript" src="./assets/scripts/vanilla-tilt.js"></script>
+
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 10,
+        speed: 200,
+        reverse: true,
+        glare: true,
+        "max-glare": 0.1,
+    });
+</script>
 </body>
 
 </html>

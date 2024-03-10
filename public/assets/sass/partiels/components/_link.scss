@@ -16,13 +16,13 @@
 .text-links {
     color: $color-font-dark;
     text-decoration : none;
-    background-image: linear-gradient(transparent calc(50% - 5px), rgba(200, 62, 52, 0.5) calc(50% - 5px));
+    background-image: linear-gradient(transparent calc(50% - 5px), $color-link-global calc(50% - 5px));
     background-size: 100% 200%;
     background-position: 0 0;
     transition: all 0.3s ease-out 0s;
     &:hover {
         color: $color-link-hover;
-        background-image: linear-gradient(transparent calc(50% - 5px), rgba(200, 62, 52, 0.75) calc(50% - 5px));
+        background-image: linear-gradient(transparent calc(50% - 5px), $color-link-global-hover calc(50% - 5px));
         background-position: 0 100%;
     }
 
