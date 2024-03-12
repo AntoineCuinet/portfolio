@@ -2,7 +2,6 @@
     position: relative;
     padding: 200px 0 0 0;
     height: 75vh;
-    color: light($color-bg);
     width: 100%;
     max-width: $breakpoint-large;
     margin: auto;
@@ -28,6 +27,7 @@
         position: absolute;
         left: 5%;
         top: 30vh;
+        color: $color-white;
     }
 
     .synopsis {
@@ -46,7 +46,11 @@
 }
 
 section {
+    h2 {
+        color: $color-white;
+    }
     p {
+        color: $color-font-dark;
         font-size: $font-size-m;
         padding: $font-size-m 10%;
         text-align: justify;

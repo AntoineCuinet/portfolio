@@ -43,7 +43,7 @@ h1 {
 }
 
 ::-webkit-selection {
-  color: #141619 e;
+  color: #141619;
   background: #FFFFF0;
 }
 
@@ -82,7 +82,6 @@ header {
   position: relative;
   padding: 200px 0 0 0;
   height: 75vh;
-  color: #FFFFF0;
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -111,6 +110,7 @@ header {
   position: absolute;
   left: 5%;
   top: 30vh;
+  color: #FFFFF0;
 }
 .landing-page .synopsis {
   position: absolute;
@@ -125,7 +125,11 @@ header {
   left: 10%;
 }
 
+section h2 {
+  color: #FFFFF0;
+}
 section p {
+  color: #abadaf;
   font-size: 1rem;
   padding: 1rem 10%;
   text-align: justify;
@@ -137,12 +141,11 @@ section p {
 }
 
 footer {
-  margin-top: 50px;
   flex-shrink: 0;
   width: 100%;
   border-top: 1px dashed #141619;
   background: linear-gradient(169deg, rgb(134, 44, 38) 0%, rgb(150, 49, 43) 100%);
-  color: #333;
+  color: #abadaf;
 }
 footer .footer-container {
   max-width: 1200px;
@@ -522,7 +525,7 @@ nav .first-container .navlinks-container a:hover::after {
 }
 
 .footer-links {
-  color: #333;
+  color: #abadaf;
   text-decoration: none;
   transition: 0.3s ease-out;
   font-size: 1rem;
@@ -533,7 +536,7 @@ nav .first-container .navlinks-container a:hover::after {
   }
 }
 .footer-links:visited {
-  color: #333;
+  color: #abadaf;
 }
 
 .text-links {
@@ -554,7 +557,7 @@ nav .first-container .navlinks-container a:hover::after {
 }
 
 .footer-links:hover {
-  color: #abadaf;
+  color: #FFFFF0;
 }
 
 .section-cards {
@@ -608,6 +611,92 @@ nav .first-container .navlinks-container a:hover::after {
   color: #abadaf;
 }
 
+.end-transition-section, .transition-section {
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  background: #FFFFF0;
+  padding: 50px auto;
+  border: none;
+}
+.end-transition-section .overlay, .transition-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: rgb(7, 7, 7);
+  border: none;
+  border-radius: 0 0 0 150px/50px;
+}
+.end-transition-section .overlay::before, .transition-section .overlay::before, .end-transition-section .overlay::after, .transition-section .overlay::after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  right: 0;
+  bottom: -50px;
+  background: rgb(7, 7, 7);
+}
+.end-transition-section .overlay::after, .transition-section .overlay::after {
+  border-top-right-radius: 150px 50px;
+  background: #FFFFF0;
+}
+
+.end-transition-section {
+  background: rgb(7, 7, 7);
+}
+.end-transition-section .overlay {
+  background: #FFFFF0;
+}
+.end-transition-section .overlay::before, .end-transition-section .overlay::after {
+  background: #FFFFF0;
+}
+.end-transition-section .overlay::after {
+  background: rgb(7, 7, 7);
+}
+
+.white-section {
+  background: #FFFFF0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.white-section h2 {
+  padding-bottom: 30px;
+  color: #141619;
+}
+.white-section p {
+  color: #333 !important;
+}
+.white-section p a {
+  color: #333 !important;
+}
+.white-section ::selection {
+  color: #FFFFF0;
+  background: #141619;
+}
+.white-section ::-moz-selection {
+  color: #FFFFF0;
+  background: #141619;
+}
+.white-section ::-webkit-selection {
+  color: #FFFFF0;
+  background: #141619;
+}
+
+.slider-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.slider-section h2 {
+  padding-bottom: 30px;
+}
+
 .btn-danger, .btn {
   display: inline-block;
   position: relative;
@@ -625,7 +714,7 @@ nav .first-container .navlinks-container a:hover::after {
   text-transform: capitalize;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-out 0s;
 }
 .btn-danger::before, .btn::before {

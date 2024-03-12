@@ -1,10 +1,10 @@
 footer {
-    margin-top: 50px;
+    // margin-top: 50px;
     flex-shrink: 0;
     width: 100%;
     border-top: 1px dashed $color-black;
     background: $color-primary-gradient;
-    color: $color-font;
+    color: $color-font-dark;
 
     .footer-container {
         max-width: $breakpoint-large;

@@ -1,0 +1,55 @@
+%transition-section {
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    background: $color-white;
+    padding: 50px auto;
+    border: none;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background: $color-bg;
+        border: none;
+        border-radius: 0 0 0 150px / 50px;
+
+        &::before, 
+        &::after {
+            content: '';
+            position: absolute;
+            height: 50px;
+            width: 100px;
+            right: 0;
+            bottom: -50px;
+            background: $color-bg;
+        }
+
+        &::after {
+            border-top-right-radius: 150px 50px;
+            background: $color-white;
+        }
+    }
+}
+.transition-section {
+    @extend %transition-section;
+}
+
+.end-transition-section {
+    @extend %transition-section;
+    background: $color-bg;
+    .overlay {
+        background: $color-white;
+
+        &::before, 
+        &::after {
+            background: $color-white;
+        }
+
+        &::after {
+            background: $color-bg;
+        }
+    }
+}

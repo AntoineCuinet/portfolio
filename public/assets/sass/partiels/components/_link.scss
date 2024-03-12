@@ -1,5 +1,5 @@
 %link {
-    color: $color-font;
+    color: $color-font-dark;
     text-decoration : none;
     transition: 0.3s ease-out;
     font-size: $size-link;
@@ -9,7 +9,7 @@
     }
 
     &:visited {
-        color: $color-font;
+        color: $color-font-dark;
     }
 }
 
@@ -35,6 +35,6 @@
 .footer-links {
     @extend %link;
     &:hover {
-        color: $color-link-hover;
+        color: $color-white;
     }
 }

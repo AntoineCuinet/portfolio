@@ -43,14 +43,14 @@ h1 {
 // Selecions
 // ========================================================================
 ::selection {
-    color: light($color-bg, $color-white, $color-black);
-    background: light($color-bg, $color-font-selection, $color-white);
+    color: $color-black;
+    background: $color-white;
 }
 ::-moz-selection {
-    color: light($color-bg, $color-white, $color-black);
-    background: light($color-bg, $color-font-selection, $color-white);
+    color: $color-black;
+    background: $color-white;
 }
 ::-webkit-selection {
-    color: light($color-bg, $color-white, $color-black)e;
-    background: light($color-bg, $color-font-selection, $color-white);
+    color: $color-black;
+    background: $color-white;
 }

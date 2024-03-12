@@ -57,25 +57,48 @@ echo <<<'HTML'
         </a>
     </section>
 
-    <section>
+    <div class="transition-section">
+        <span class="overlay"></span>
+    </div>
+
+    <section class="white-section">
         <h2>En quelques lignes ...</h2>
-        <p>Explorez mon univers digital où chaque projet est une histoire unique, une fusion de créativité, de technologie et d'innovation. Plongez dans mon portfolio pour découvrir mes projets les plus récents et les plus remarquables, où chaque ligne de code raconte une histoire.</p>
+        <p>Explorez mon univers digital où <a class="text-links" href="./portfolio.php">chaque projet</a> est une histoire unique, une fusion de créativité, de technologie et d'innovation. Plongez dans <a class="text-links" href="./portfolio.php">mon portfolio</a> pour découvrir mes projets les plus récents et les plus remarquables, où chaque ligne de code raconte une histoire.</p>
 
-        <p>Que vous soyez à la recherche d'un design épuré, d'une fonctionnalité exceptionnelle ou d'une expérience utilisateur immersive, vous trouverez ici une vitrine de mon savoir-faire et de ma passion pour le web.</p>
+        <p>Que vous soyez à la recherche d'un design épuré, d'une fonctionnalité exceptionnelle ou d'une expérience utilisateur immersive, vous <a class="text-links" href="./portfolio.php">trouverez ici</a> une vitrine de mon savoir-faire et de ma passion pour le web.</p>
 
-        <p>En tant que professionnel du développement web, je suis spécialisé dans la création de sites e-commerce, de sites sur WordPress, ainsi que dans le développement web sur-mesure. Chaque projet est conçu avec une attention méticuleuse pour répondre à vos besoins spécifiques et à ceux de votre entreprise.</p>
+        <p>En tant que <a class="text-links" href="./about.php">professionnel</a> du développement web, je suis spécialisé dans la création de sites e-commerce, de sites sur WordPress, ainsi que dans le développement web sur-mesure. Chaque projet est conçu avec une attention méticuleuse pour répondre à vos besoins spécifiques et à ceux de votre entreprise.</p>
 
-        <p>Prenez le temps de parcourir mon CV, de découvrir mes compétences techniques et de me contacter pour discuter de vos projets web. Ensemble, transformons vos idées en réalité digitale.</p>
+        <p>Prenez le temps de <a class="text-links" href="./about.php#cv">parcourir mon CV</a>, de découvrir mes compétences techniques et de <a class="text-links" href="./contact.php">me contacter</a> pour discuter de vos projets web. Ensemble, transformons vos idées en réalité digitale.</p>
     </section>
 
-    <section>
+    <div class="end-transition-section">
+        <span class="overlay"></span>
+    </div>
+
+    <section class="slider-section">
         <h2>Quelques réalisations</h2>
         <p>(Mettre un caroucelle des réalisations)</p>
+
+        <div class="container-slider">
+            <ul>
+                <li>
+                    <img src="./assets/pictures/image_template.jpeg" alt="img" width="600">
+                    <h2>R&Day Informatique 2024</h2>
+                    <a class="btn" href="./portfolio.php#r&d">Découvrir</a>
+                </li>
+            </ul>
+        </div>
     </section>
 
-    <section>
+    <div class="transition-section">
+        <span class="overlay"></span>
+    </div>
+
+    <section class="white-section">
         <h2>Besoin d’un accompagnement professionnel pour votre projet ?</h2>
-        <p>(Mettre le bouton "contact/devis)</p>
+        <p>Vous pouvez me contactez via le formulaire de contact afin de discuter ensenble de solutions pour vos projets webs.</p>
+        <a class="btn" href="./contact.php">Contact/Devis</a>
     </section>
 HTML;
 
