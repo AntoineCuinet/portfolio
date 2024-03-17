@@ -5,7 +5,7 @@ $description_page = 'Page d\'accueuil';
 
 include('./assets/views/header.php');
 
-echo <<<'HTML'
+echo <<<HTML
     <section class="landing-page">
         <h1 id="first-title">ANTOINE
             <br>
@@ -78,16 +78,24 @@ echo <<<'HTML'
 
     <section class="slider-section">
         <h2>Quelques réalisations</h2>
-        <p>(Mettre un caroucelle des réalisations)</p>
+        <!-- <p>(Mettre un caroucelle des réalisations)</p> -->
 
         <div class="container-slider">
-            <ul>
+            <i id="left" class='bx bx-chevron-left'></i>
+            <ul class="carousel">
                 <li>
-                    <img src="./assets/pictures/image_template.jpeg" alt="img" width="600">
+                    <img src="./assets/pictures/image_template.jpeg" alt="img" draggable="false">
+                    <h2>R&Day Informatique 2024</h2>
+                    <a class="btn" href="./portfolio.php#r&d">Découvrir</a>
+                </li>
+
+                <li>
+                    <img src="./assets/pictures/image_template.jpeg" alt="img" draggable="false">
                     <h2>R&Day Informatique 2024</h2>
                     <a class="btn" href="./portfolio.php#r&d">Découvrir</a>
                 </li>
             </ul>
+            <i id="right" class='bx bx-chevron-right'></i>
         </div>
     </section>
 

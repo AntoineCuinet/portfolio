@@ -16,23 +16,88 @@ window.addEventListener("load", function () {
     }, 400);
 
 
-    // btn
-    $(function() {  
-        $('.btn')
-          .on('mouseenter', function(e) {
-                  var parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-                  $(this).find('span').css({top:relY, left:relX})
-          })
-          .on('mouseout', function(e) {
-                  var parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-              $(this).find('span').css({top:relY, left:relX})
-          });
-      });
+    /* btn */
+    // $(function() {  
+    //     $('.btn')
+    //       .on('mouseenter', function(e) {
+    //               var parentOffset = $(this).offset(),
+    //                 relX = e.pageX - parentOffset.left,
+    //                 relY = e.pageY - parentOffset.top;
+    //               $(this).find('span').css({top:relY, left:relX})
+    //       })
+    //       .on('mouseout', function(e) {
+    //               var parentOffset = $(this).offset(),
+    //                 relX = e.pageX - parentOffset.left,
+    //                 relY = e.pageY - parentOffset.top;
+    //           $(this).find('span').css({top:relY, left:relX})
+    //       });
+    //   });
       
+
+
+    /* slider */
+    const carousel = document.querySelector(".carousel");
+    const wrapper = document.querySelector(".container-slider");
+    const arrawBtns = document.querySelectorAll(".container-slider i");
+    const firstCardWidth = document.querySelector(".carousel li").offsetWidth;
+    const carouselChildrens = [...carousel.children];
+    let isDragging = false, startX, startScrollLeft, timeoutId;
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    carouselChildrens.slice(-cardPerView).reverse().forEach( card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
+    carouselChildrens.slice(0, cardPerView).forEach( card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    arrawBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+        })
+    });
+
+    const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    }
+    const dragging = (e) => {
+        if(!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    }
+    const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    }
+
+    const autoPlay = () => {
+        if(this.window.innerWidth < 800) return;
+        timeoutId = this.setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    }
+    autoPlay();
+
+    const infiniteScroll = () => {
+        if(carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        }
+        this.clearTimeout(timeoutId);
+        if(!wrapper.matches(":hover")) autoPlay();
+    }
+    
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    wrapper.addEventListener("mouseenter", () => this.clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
 
 
 
@@ -41,7 +106,7 @@ window.addEventListener("load", function () {
     const hamburgerToggler = document.querySelector(".hamburger");
     const navLinksContainer = document.querySelector(".navlinks-container");
 
-    let startX; // Position X au début du touch
+    // let startX; // Position X au début du touch
     let distance; // Distance de glissement nécessaire pour fermer le menu
 
     const toggleNav = () => {
@@ -58,7 +123,7 @@ window.addEventListener("load", function () {
     /* fermer le menu aux slides vers la gauche */
     document.addEventListener("touchstart", function (e) {
         startX = e.touches[0].clientX;
-        distance = 150; // Vous pouvez ajuster cette valeur selon vos besoins
+        distance = 120; //ajuster la valeur aux besoins
     });
     document.addEventListener("touchmove", function (e) {
         if (startX) {

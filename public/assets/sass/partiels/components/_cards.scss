@@ -12,16 +12,20 @@
     a {
         text-decoration: none;
         cursor: pointer;
+        margin: 20px;
 
         .card {
             position: relative;
             z-index: 1;
             width: 250px;
             height: 400px;
-            margin: 20px;
             box-shadow: $box-shadow-white;
             border: 1px solid rgba(200, 62, 52, 0.1);
-            border-radius: 20px;
+            // border-radius: 20px 10px 20px 10px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 85px 35px;
+            border-bottom-left-radius: 85px 35px;
+            border-bottom-right-radius: 15px;
             background: rgba(200, 62, 52, 0.5);
             overflow: hidden;
             padding: 20px;

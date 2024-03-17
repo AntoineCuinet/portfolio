@@ -5,7 +5,7 @@ $description_page = 'Page d\'accueuil';
 
 include('./assets/views/header.php');
 
-echo <<<'HTML'
+echo <<<HTML
     <section id="professional-career">
     </section>
 
