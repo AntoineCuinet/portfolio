@@ -49,6 +49,15 @@
 
 <!-- script.js -->
 <script src="./script.js"></script>
+<?php
+// Vérifier si la page actuelle est index.php
+if (basename($_SERVER['PHP_SELF']) == 'index.php') {
+    // Charger le script uniquement si nous sommes sur index.php
+    echo '<script src="./assets/scripts/index.js"></script>';
+} else {
+    echo '<script src="./assets/scripts/notIndex.js"></script>';
+}
+?>
 <script type="text/javascript" src="./assets/scripts/vanilla-tilt.js"></script>
 
 <script type="text/javascript">
