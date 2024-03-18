@@ -1,0 +1,98 @@
+.slider-section {
+    position: relative;
+    width: 100%;
+    max-width: $breakpoint-large;
+    margin: auto;
+    text-align: center;
+    padding: 50px 5% 100px 5%;
+
+    h2 {
+        padding-bottom: 100px;
+    }
+
+    .container-slider {
+        position: relative;
+        max-width: 1100px;
+        width: 100%;
+        margin: auto;
+
+        i {
+            position: absolute;
+            z-index: 2;
+            height: 50px;
+            width: 50px;
+            font-size: 40px;
+            background: $color-white;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: $box-shadow;
+
+            &:first-child {
+                left: -22px;
+            }
+
+            &:last-child {
+                right: -11px;
+            }
+        }
+
+        ul::-webkit-scrollbar {
+            display: none;
+        }
+
+        ul {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% / 1) - 12px);
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: 0;
+
+            &.dragging {
+                scroll-behavior: auto;
+                scroll-snap-type: none;
+            }
+
+            &.dragging li{
+                cursor: grab;
+                user-select: none;
+            }
+
+            &.no-transition {
+                scroll-behavior: auto;
+            }
+
+            li {
+                scroll-snap-align: start;
+                height: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: $color-white;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 85px 35px;
+                border-bottom-left-radius: 85px 35px;
+                border-bottom-right-radius: 15px;
+                padding: 10px 0 20px 0;
+
+                img {
+                    width: 600px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+                }
+                h2 {
+                    color: $color-black;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}

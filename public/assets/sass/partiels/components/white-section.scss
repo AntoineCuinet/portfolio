@@ -1,0 +1,33 @@
+.white-section {
+    background: $color-white;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    h2 {
+        padding-bottom: 30px;
+        color: $color-black;
+    }
+
+    p {
+        color: $color-font !important;
+
+        a {
+            color: $color-font !important;
+        }
+    }
+
+    
+
+    ::selection {
+        color: $color-white;
+        background: $color-black;
+    }
+    ::-moz-selection {
+        color: $color-white;
+        background: $color-black;
+    }
+    ::-webkit-selection {
+        color: $color-white;
+        background: $color-black;
+    }
+}
