@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /assets/
-
-Sitemap: https://acuinet.fr/sitemap.xml
