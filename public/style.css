@@ -783,25 +783,7 @@ nav .first-container .navlinks-container a:hover::after {
   min-width: 100vw;
   max-height: 100vh;
   max-width: 100vw;
-}
-.login-container img {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  filter: brightness(70%);
-}
-.login-container .user-picture {
-  position: relative;
-  right: 0;
-  height: 50px;
-  width: 50px;
-}
-.login-container .user-picture img {
-  filter: brightness(100%);
-  border-radius: 10px;
+  margin-top: 200px;
 }
 .login-container .wrapper {
   width: 50%;
@@ -810,33 +792,46 @@ nav .first-container .navlinks-container a:hover::after {
   border: 2px solid rgb(200, 63, 52);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3215686275);
+  box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 15px 30px;
 }
-.login-container .wrapper .wrapper-contain .login-title {
+@media screen and (max-width: 800px) {
+  .login-container .wrapper {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .login-container .wrapper .wrapper-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.login-container .wrapper .wrapper-contain h2 {
   font-size: 36px;
   text-align: center;
   color: rgb(200, 63, 52);
 }
-.login-container .wrapper .wrapper-contain .form {
+@media screen and (max-width: 800px) {
+  .login-container .wrapper .wrapper-contain h2 {
+    font-size: 0.75rem;
+  }
+}
+.login-container .wrapper .wrapper-contain form {
   padding-top: 20px;
   text-align: center;
 }
-.login-container .wrapper .wrapper-contain .form .btn-login {
-  display: inline-block;
-  margin: 20px 0 0 0;
-}
-.login-container .wrapper-setting {
-  width: 90%;
-  max-width: 1200px;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  margin: 30px;
+@media screen and (max-width: 800px) {
+  .login-container .wrapper .wrapper-contain form {
+    padding-top: 15px;
+  }
 }
 
-.form-group {
+.form-field {
   position: relative;
   z-index: 0;
   padding-top: 20px;
@@ -847,7 +842,15 @@ nav .first-container .navlinks-container a:hover::after {
   left: 50%;
   transform: translateX(-53%);
 }
-.form-group input {
+@media screen and (max-width: 800px) {
+  .form-field {
+    padding-top: 5px;
+    font-size: 0.75rem;
+    width: 250px;
+  }
+}
+.form-field input,
+.form-field textarea {
   width: 100%;
   padding: 7px;
   border: 1px solid rgb(200, 63, 52);
@@ -857,7 +860,9 @@ nav .first-container .navlinks-container a:hover::after {
   font-size: 1em;
   color: rgb(200, 63, 52);
 }
-.form-group input:valid ~ span, .form-group input:focus ~ span {
+.form-field input:valid ~ label, .form-field input:focus ~ label,
+.form-field textarea:valid ~ label,
+.form-field textarea:focus ~ label {
   transform: translateX(15px) translateY(-10px);
   font-size: 0.65em;
   padding: 0 10px;
@@ -866,14 +871,14 @@ nav .first-container .navlinks-container a:hover::after {
   border-radius: 4px;
   letter-spacing: 1px;
 }
-.form-group i {
-  position: absolute;
-  right: -30px;
-  transform: translateY(35%);
-  font-size: 25px;
-  color: rgb(200, 63, 52);
+@media screen and (max-width: 800px) {
+  .form-field input:valid ~ label, .form-field input:focus ~ label,
+  .form-field textarea:valid ~ label,
+  .form-field textarea:focus ~ label {
+    transform: translateX(15px) translateY(-7px);
+  }
 }
-.form-group span {
+.form-field label {
   position: absolute;
   left: 0;
   padding: 8px;
@@ -882,12 +887,10 @@ nav .first-container .navlinks-container a:hover::after {
   color: rgb(200, 63, 52);
   transition: 0.5s;
 }
-.form-group .color {
-  cursor: pointer;
-}
-
-.setting {
-  margin-top: 200px;
+@media screen and (max-width: 800px) {
+  .form-field label {
+    padding: 7px;
+  }
 }
 
 .btn-danger, .btn {
