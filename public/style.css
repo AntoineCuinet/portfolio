@@ -844,7 +844,7 @@ nav .first-container .navlinks-container a:hover::after {
   padding-top: 20px;
   font-family: Cochin, "Roboto", Arial, Courier, monospace;
   font-size: 22px;
-  width: 350px;
+  width: 550px;
   text-align: center;
   left: 50%;
   transform: translateX(-53%);

@@ -2,32 +2,45 @@
 $title = 'CUINET';
 $title_page = 'Contact';
 $description_page = 'Page de Contact';
-$firstname = $lastname = $email = $subject = $message = "";
-$firstnameError = $lastnameError = $emailError = $subjectError = $messageError = "";
+$firstname = $lastname = $email = $subject = $message = '';
+$firstnameError = $lastnameError = $emailError = $subjectError = $messageError = '';
+// $Errs = array(
+//     'firstnameError' => '',
+//     'lastnameError' => '',
+//     'emailError' => '',
+//     'subjectError' => '',
+//     'messageError' => '',
+// );
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST = filter_input_array(INPUT_POST, FILTER_UNSAFE_RAW);
+    // $x = array_keys($_POST);
+    // if (count(array_diff($obligatoires, $x)) > 0){
+    //     return false;
+    // }
 
-    //fonction de vérif
 	function verifyInput($var) {
 		$var = trim($var);
 		$var = stripslashes($var);
-		$var = htmlspecialchars($var);
-	  
+		// $noTags = strip_tags($var);
+        // if($var != $noTags) {
+        //     $Errs["$var"."Error"] = 'La zone Nom ne peut pas contenir de code HTML';
+        // }
+        $var = htmlentities($var, ENT_QUOTES, 'UTF-8');
+        // $var = mysqli_real_escape_string(mysqli $mysql, string $string);
 		return $var;
 	}
-
-    $firstname = verifyInput($_POST["firstname"]);
-    $lastname = verifyInput($_POST["lastname"]);
-    $email = verifyInput($_POST["email"]);
-    $password = $_POST["password"];
+    $firstname = verifyInput($_POST['firstname']);
+    $lastname = verifyInput($_POST['lastname']);
+    $email = verifyInput($_POST['email']);
+    $subject = verifyInput($_POST['subject']);
+    $message = verifyInput($_POST['message']);
     
-    
-    if(empty($firstname) || strlen($firstname) < 3) {
+    if(empty($firstname) || strlen($firstname) < 3 || strlen($message) > 50) {
         $firstnameError = 'Le prénom n\'est pas valide.';
         $firstname = '';
     }
-    if(empty($lastname) || strlen($lastname) < 3) {
+    if(empty($lastname) || strlen($lastname) < 3 || strlen($message) > 50) {
         $lastnameError = 'Le nom n\'est pas valide.';
         $lastname = '';
     }
@@ -35,42 +48,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailError = 'L\'email n\'est pas valide.';
         $email = '';
     }
-    if(empty($password) || strlen($password) < 7) {
-        $passwordError = 'Le mot de passe doit contenir au moins 7 charactères.';
+    if(empty($subject) || strlen($subject) < 7 || strlen($message) > 100) {
+        $subjectError = 'Le sujet doit contenir au moins 7 charactères.';
+        $subject = '';
     }
 
-    if(empty($firstnameError) && empty($lastnameError) && empty($emailError) && empty($passwordError)){
-        $req = $db->prepare('SELECT * FROM users WHERE email = :email');
-        $req->bindValue(':email', $email, PDO::PARAM_STR);
-        $req->execute();
+    if(empty($message) || strlen($message) < 100 || strlen($message) > 9999) {
+        $messageError = 'Le message doit contenir au moins 100 charactères.';
+        $message = '';
+    }
 
-        if($req->rowCount() > 0) {
-            $emailError = 'Un utilisateur est déjà enregistré avec cet Email.';
-        }
-
-        // $filename = "./icon-user.png";
-
-        if(empty($firstnameError) && empty($lastnameError) && empty($emailError) && empty($passwordError)) {
-            $req = $db->prepare('INSERT INTO users (firstname, lastname, email, password, created_at) VALUES (:firstname, :lastname, :email, :password, NOW())');
-            $req->bindValue(':firstname', $firstname, PDO::PARAM_STR);
-            $req->bindValue(':lastname', $lastname, PDO::PARAM_STR);
-            $req->bindValue(':email', $email, PDO::PARAM_STR);
-            // $req->bindValue(':file', $filename, PDO::PARAM_STR); // Utilisez le chemin de l'image par défaut
-            $req->bindValue(':password', password_hash($password, PASSWORD_DEFAULT), PDO::PARAM_STR);
-            $req->execute();
-
-
-            $req = $db->prepare('SELECT * FROM users WHERE email = :email');
-            $req->bindValue(':email', $email, PDO::PARAM_STR);
-            $req->execute();
-
-            $user = $req->fetch();
-            if($user) {
-                $_SESSION['user'] = $user;
-                header('Location: begining_account.php');
-                exit();
-            }
-        }
+    if(empty($firstnameError) && empty($lastnameError) && empty($emailError) && empty($subjectError) && empty($messageError)){
+        //traitement de l'envoie ici.
     }
 }
 
@@ -101,7 +90,7 @@ echo '<section class="login-container">',
 '<label for="subject">Sujet<span class="form-oblig">*</span></label>',
 '</div>',
 '<div class="form-field">',
-'<textarea name="message" id="message" value="" rows="4" maxlength="1000" autocomplete="off" spellcheck="true" required>', $message ?? '', '</textarea>',
+'<textarea name="message" id="message" value="" rows="4" maxlength="10000" autocomplete="off" spellcheck="true" required>', $message ?? '', '</textarea>',
 '<label for="message">Message<span class="form-oblig">*</span></label>',
 '</div>',
 
