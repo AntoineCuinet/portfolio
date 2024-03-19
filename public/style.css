@@ -660,15 +660,22 @@ nav .first-container .navlinks-container a:hover::after {
 }
 
 .white-section {
+  width: 100vw;
   background: #FFFFF0;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .white-section h2 {
+  max-width: 1200px;
   padding-bottom: 30px;
   color: #141619;
 }
 .white-section p {
+  max-width: 1200px;
   color: #333 !important;
 }
 .white-section p a {
@@ -779,63 +786,63 @@ nav .first-container .navlinks-container a:hover::after {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  min-height: 100vh;
   min-width: 100vw;
-  max-height: 100vh;
   max-width: 100vw;
-  margin-top: 200px;
+  margin: 200px auto;
+}
+@media screen and (max-width: 800px) {
+  .login-container {
+    margin: 100px auto;
+    padding: 0;
+    height: auto;
+  }
 }
 .login-container .wrapper {
-  width: 50%;
+  width: 80%;
+  max-width: 1200px;
   display: block;
   background: transparent;
   border: 2px solid rgb(200, 63, 52);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 15px 30px;
+  border-radius: 20px;
+  padding: 30px 30px;
 }
 @media screen and (max-width: 800px) {
   .login-container .wrapper {
     width: 100vw;
-    height: 100vh;
     border: none;
+    box-shadow: none;
   }
 }
-@media screen and (max-width: 800px) {
-  .login-container .wrapper .wrapper-contain {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.login-container .wrapper .wrapper-contain h2 {
+.login-container .wrapper h2 {
   font-size: 36px;
   text-align: center;
-  color: rgb(200, 63, 52);
+  color: #FFFFF0;
 }
-@media screen and (max-width: 800px) {
-  .login-container .wrapper .wrapper-contain h2 {
-    font-size: 0.75rem;
-  }
+.login-container .wrapper h3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 27px;
+  color: #abadaf;
 }
-.login-container .wrapper .wrapper-contain form {
+.login-container .wrapper form {
   padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
-@media screen and (max-width: 800px) {
-  .login-container .wrapper .wrapper-contain form {
-    padding-top: 15px;
-  }
+.login-container .wrapper form input[type=submit] {
+  margin-top: 30px;
 }
 
 .form-field {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   padding-top: 20px;
-  font-family: "Source Code Pro";
+  font-family: Cochin, "Roboto", Arial, Courier, monospace;
   font-size: 22px;
   width: 350px;
   text-align: center;
@@ -844,21 +851,34 @@ nav .first-container .navlinks-container a:hover::after {
 }
 @media screen and (max-width: 800px) {
   .form-field {
-    padding-top: 5px;
-    font-size: 0.75rem;
+    padding-top: 15px;
+    font-size: 1rem;
     width: 250px;
   }
 }
 .form-field input,
 .form-field textarea {
   width: 100%;
+  height: 50px;
   padding: 7px;
   border: 1px solid rgb(200, 63, 52);
   background: transparent;
-  border-radius: 5px;
+  border-radius: 15px;
   outline: none;
   font-size: 1em;
   color: rgb(200, 63, 52);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  box-shadow: 1px 1px 30px rgba(200, 63, 52, 0.3); /* Ajoutez l'ombre lorsqu'en focus */
+}
+.form-field input:invalid,
+.form-field textarea:invalid {
+  border: 2px dashed #96312b;
+}
+.form-field input:valid,
+.form-field textarea:valid {
+  border: 2px solid rgb(200, 63, 52);
 }
 .form-field input:valid ~ label, .form-field input:focus ~ label,
 .form-field textarea:valid ~ label,
@@ -878,6 +898,16 @@ nav .first-container .navlinks-container a:hover::after {
     transform: translateX(15px) translateY(-7px);
   }
 }
+.form-field textarea {
+  resize: none;
+  outline: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgb(7, 7, 7);
+  color: rgb(200, 63, 52);
+  height: auto;
+  border-radius: 15px;
+}
 .form-field label {
   position: absolute;
   left: 0;
@@ -889,8 +919,11 @@ nav .first-container .navlinks-container a:hover::after {
 }
 @media screen and (max-width: 800px) {
   .form-field label {
-    padding: 7px;
+    padding: 12px;
   }
+}
+.form-field label span {
+  color: rgb(134, 44, 38);
 }
 
 .btn-danger, .btn {
@@ -934,6 +967,7 @@ nav .first-container .navlinks-container a:hover::after {
 }
 .btn-danger:hover::before, .btn:hover::before {
   opacity: 1;
+  color: #141619;
   text-indent: 0px;
 }
 

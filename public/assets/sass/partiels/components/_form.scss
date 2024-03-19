@@ -3,52 +3,52 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    min-height: 100vh;
     min-width: 100vw;
-    max-height: 100vh;
     max-width: 100vw;
-    margin-top: 200px;
+    margin: 200px auto;
+    @media #{$max-width-s} {
+        margin: 100px auto;
+        padding: 0;
+        height: auto;
+    }
 
     .wrapper {
-        width: 50%;
+        width: 80%;
+        max-width: $breakpoint-large;
         display: block;
         background: transparent;
         border: 2px solid $color-primary;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        @include blur-filter();
         box-shadow: $box-shadow-white;
-        border-radius: 10px;
-        padding: 15px 30px;
+        border-radius: 20px;
+        padding: 30px 30px;
 
         @media #{$max-width-s} {
             width: 100vw;
-            height: 100vh;
             border: none;
+            box-shadow: none;
         }
 
-        .wrapper-contain {
-            @media #{$max-width-s} {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            color: $color-white;
+        }
 
-            h2 {
-                font-size: 36px;
-                text-align: center;
-                color: $color-primary;
-                @media #{$max-width-s} {
-                    font-size: $font-size-s;
-                }
-            }
-    
-            form {
-                padding-top: 20px;
-                text-align: center;
-                @media #{$max-width-s} {
-                    padding-top: 15px;
-                }
+        h3 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 27px;
+            color: $color-font-dark;
+        }
+
+        form {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+
+            input[type=submit] {
+                margin-top: 30px;
             }
         }
     }
@@ -57,30 +57,43 @@
 
 .form-field {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     padding-top: 20px;
-    font-family: "Source Code Pro";
+    font-family: Cochin, $font-family;
     font-size: 22px;
     width: 350px;
     text-align: center;
     left: 50%;
     transform: translateX(-53%);
     @media #{$max-width-s} {
-        padding-top: 5px;
-        font-size: $font-size-s;
+        padding-top: 15px;
+        font-size: $font-size-m;
         width: 250px;
     }
 
     input, 
     textarea {
         width: 100%;
+        height: 50px;
         padding: 7px;
         border: 1px solid $color-primary;
         background: transparent;
-        border-radius: 5px;
+        border-radius: 15px;
         outline: none;
         font-size: 1em;
         color: $color-primary;
+
+        &:focus {
+            box-shadow: $box-shadow-red; /* Ajoutez l'ombre lorsqu'en focus */
+        }
+
+        &:invalid {
+            border: 2px dashed $color-danger;
+        }
+        
+        &:valid {
+            border: 2px solid $color-primary;
+        }
 
         &:valid ~ label,
         &:focus ~ label {
@@ -97,17 +110,17 @@
             }
         }
     }
-    // i {
-    //     position: absolute;
-    //     right: -30px;
-    //     transform: translateY(35%);
-    //     font-size: 25px;
-    //     color: $color-primary;
 
-    //     @media #{$max-width-s} {
-    //         transform: translateY(20%);
-    //     }
-    // }
+    textarea {
+        resize: none;
+        outline: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: $color-bg;
+        color: $color-primary;
+        height: auto;
+        border-radius: 15px;
+    }
 
     label {
         position: absolute;
@@ -119,7 +132,11 @@
         transition: 0.5s;
 
         @media #{$max-width-s} {
-            padding: 7px;
+            padding: 12px;
+        }
+
+        span {
+            color: rgb(134, 44, 38);
         }
     }
 }
