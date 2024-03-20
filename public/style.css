@@ -837,6 +837,16 @@ nav .first-container .navlinks-container a:hover::after {
 .login-container .wrapper form input[type=submit] {
   margin-top: 30px;
 }
+.login-container .wrapper form .alert-green {
+  border-radius: 15px;
+  margin: 20px auto;
+  background-color: #367131 !important;
+  font-size: 22px;
+}
+.login-container .wrapper form .alert-green p {
+  color: #FFFFF0;
+  text-align: center;
+}
 
 .form-field {
   position: relative;
@@ -847,7 +857,7 @@ nav .first-container .navlinks-container a:hover::after {
   width: 550px;
   text-align: center;
   left: 50%;
-  transform: translateX(-53%);
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 800px) {
   .form-field {
@@ -924,6 +934,9 @@ nav .first-container .navlinks-container a:hover::after {
 }
 .form-field label span {
   color: rgb(134, 44, 38);
+}
+.form-field .alert p {
+  color: #FFFFF0;
 }
 
 .btn-danger, .btn {
