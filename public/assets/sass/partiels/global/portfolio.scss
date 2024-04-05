@@ -1,0 +1,11 @@
+#portfolio-section {
+    padding-top: 250px;
+    @media #{$max-width-s} {
+        padding-top: 150px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    
+    
+}

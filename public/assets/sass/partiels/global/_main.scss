@@ -21,6 +21,10 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         @include select();
+
+        @media #{$max-width-s} {
+            top: 70vh;
+        }
     }
 
     h2 {
@@ -28,6 +32,10 @@
         left: 5%;
         top: 30vh;
         color: $color-white;
+        @media #{$max-width-s} {
+            top: 20vh;
+            left: 10%;
+        }
     }
 
     .synopsis {
@@ -36,27 +44,52 @@
         padding: 0 45% 0 5%;
         margin-top: 0;
         color: $color-font-dark;
+        @media #{$max-width-s} {
+            font-size: $font-size-m;
+            top: 30vh;
+            left: 10%;
+            padding: 0 10% 0 0;
+        }
     }
 
     .btn {
         position: absolute;
         top: 55vh;
         left: 10%;
-    }
-}
-
-section {
-    h2 {
-        color: $color-white;
-    }
-    p {
-        color: $color-font-dark;
-        font-size: $font-size-m;
-        padding: $font-size-m 10%;
-        text-align: justify;
         @media #{$max-width-s} {
-            font-size: $font-size-s;
+            top: 65vh;
         }
     }
 }
 
+section {
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 100px 0;
+    
+    h2 {
+        color: $color-white;
+        padding-bottom: 30px;
+        @media #{$max-width-s} {
+            font-size: $font-size-l;
+        }
+    }
+    p {
+        max-width: $breakpoint-large;
+        color: $color-font-dark;
+        font-size: $font-size-m;
+        padding: 30px 100px;
+        text-align: justify;
+        @media #{$max-width-s} {
+            font-size: $font-size-s;
+        }
+
+        @media #{$max-width-l} {
+            padding: $font-size-m 10%;
+        }
+    }
+}

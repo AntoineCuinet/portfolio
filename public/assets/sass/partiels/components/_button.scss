@@ -67,3 +67,24 @@
         color: $color-bg;
     }
 }
+
+.btn-download {
+    @extend %btn;
+    z-index: 2;
+    background: $color-white;
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+    // mix-blend-mode: difference;
+    color: $color-primary !important;
+    border: 2px solid $color-primary;
+
+    &::before {
+        content: "\1F4C4";
+    }
+
+    &:hover {
+        background: $color-primary;
+        color: $color-white !important;
+    }
+}

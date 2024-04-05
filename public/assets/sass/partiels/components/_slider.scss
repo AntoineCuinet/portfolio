@@ -33,6 +33,10 @@
 
             &:first-child {
                 left: -22px;
+
+                @media #{$max-width-s} {
+                    left: -11px;
+                }
             }
 
             &:last-child {
@@ -81,12 +85,18 @@
                 border-bottom-left-radius: 85px 35px;
                 border-bottom-right-radius: 15px;
                 padding: 10px 0 20px 0;
+                @media #{$max-width-s} {
+                    height: 400px;
+                }
 
                 img {
                     width: 600px;
                     object-fit: cover;
                     border-radius: 20px;
                     margin-bottom: 30px;
+                    @media #{$max-width-s} {
+                        width: 250px;
+                    }
                 }
                 h2 {
                     color: $color-black;

@@ -27,6 +27,7 @@ window.addEventListener("load", function () {
     arrawBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+            // arrawBtns.style.userSelect = "none";
         })
     });
 
@@ -47,7 +48,7 @@ window.addEventListener("load", function () {
 
     const autoPlay = () => {
         if(this.window.innerWidth < 800) return;
-        timeoutId = this.setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+        timeoutId = this.setTimeout(() => carousel.scrollLeft += firstCardWidth, 5000);
     }
     autoPlay();
 

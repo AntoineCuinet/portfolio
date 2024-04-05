@@ -1,8 +1,10 @@
 <?php
 $title = 'CUINET';
 $title_page = 'Contact';
-$description_page = 'Page de Contact';
+$description = 'Page de Contact';
+$keywords = '';
 $emailPerso = 'antoine@acuinet.fr';
+// $emailPerso = 'antoine.cuinetdu70200@gmail.com';
 $Datas  = array(
     'firstname' => '',
     'lastname' => '',
@@ -64,31 +66,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['send'])) {
     if(empty($Errs['firstnameError']) && empty($Errs['lastnameError']) && empty($Errs['emailError']) && empty($Errs['subjectError']) && empty($Errs['messageError'])){
         //traitement de l'envoie ici.
         $mailHeader = 'Name : ' . $Datas['firstname'] .
-            "\r\n Last-name : " . $Datas['lastname'] . 
-            "\r\n E-mail : " . $Datas['email'] . 
-            "\r\n Subject : " . $Datas['subject'] . 
-            "\r\n Message : " . $Datas['message'] . "\r\n"; 
+            "\r\nLast-name : " . $Datas['lastname'] . 
+            "\r\nE-mail : " . $Datas['email'] . 
+            "\r\nSubject : " . $Datas['subject'] . 
+            "\r\nMessage : " . $Datas['message'] . "\r\n"; 
         
-        if(mail($emailPerso, $Datas['lastname'], $mailHeader)) {
-            $Errs['validation'] = 'Toutes les informations ont bien étés envoyés !<br>Merci.';
+        if(mail($emailPerso, $Datas['subject'], $mailHeader, '')) {
+            $Errs['validation'] = 'Toutes les informations ont bien étés envoyés !<br>Je vous répondrai dans les plus brefs délais.<br>Merci.<br><br><a class="btn" href="./index.php" style="background: white;">Accueil</a>';
+            foreach ($Datas as $key => &$value) {
+                $value = "";
+            }
         }
     }
 }
 
 include('./assets/views/header.php');
-
-echo '<section class="login-container">',
-'<div class="wrapper">',
-'<h2>', $title_page, '</h2>',
-'<h3>Un projet à confier ? Je suis à votre écoute.</h3>',
-'<p>Prenez contacte via le formulaire ci-dessous ou via <a class="text-links" href="mailto:antoine@acuinet.fr?subject=Demande%20de%20création%20de%20site%20web&body=Bonjour%2C%20%0D%0A%0D%0AJe%20vous%20contacte%20pour...">mon adresse E-mail</a>.</p>',
-'<form action="./contact.php" method="POST">';
+echo 
+'<section class="login-container">',
+    '<div class="wrapper">',
+    '<h2>', $title_page, '</h2>',
+    '<h3>Un projet à confier ? Je suis à votre écoute.</h3>',
+    '<p>Prenez contacte via le formulaire ci-dessous ou via <a class="text-links" href="mailto:antoine@acuinet.fr?subject=Demande%20de%20création%20de%20site%20web&body=Bonjour%2C%20%0D%0A%0D%0AJe%20vous%20contacte%20pour...">mon adresse E-mail</a>.</p>',
+    '<form action="./contact.php" method="POST">';
 if(!empty($Errs['validation'])):
 echo '<div class="alert-green">',
         '<p>', $Errs['validation'], '</p>',
     '</div>';
 endif;
-echo '<div class="form-field">',
+echo 
+'<div class="form-field">',
 '<input type="text" name="firstname" id="firstname" value="', $Datas['firstname'] ?? '', '" required>',
 '<label for="firstname">Prénom<span class="form-oblig">*</span></label>';
 if(!empty($Errs['firstnameError'])):
@@ -115,7 +121,6 @@ if(!empty($Errs['emailError'])):
     '</div>';
 endif;
 echo '</div>',
-
 '<div class="form-field">',
 '<input type="text" name="subject" id="subject" value="', $Datas['subject'] ?? '', '" required>',
 '<label for="subject">Sujet<span class="form-oblig">*</span></label>';
@@ -126,7 +131,7 @@ if(!empty($Errs['subjectError'])):
 endif;
 echo '</div>',
 '<div class="form-field">',
-'<textarea name="message" id="message" value="" rows="4" maxlength="10000" autocomplete="off" spellcheck="true" required>', $Datas['message'] ?? '', '</textarea>',
+'<textarea name="message" id="message" rows="4" maxlength="10000" autocomplete="off" spellcheck="true" required>', $Datas['message'] ?? '', '</textarea>',
 '<label for="message">Message<span class="form-oblig">*</span></label>';
 if(!empty($Errs['messageError'])):
     echo '<div class="alert">',
@@ -134,10 +139,8 @@ if(!empty($Errs['messageError'])):
     '</div>';
 endif;
 echo '</div>',
-
-'<input type="submit" name="send" class="btn" value="Envoyer &rarr;">',
-'</form>',
-'</div>',
+    '<input type="submit" name="send" class="btn" value="Envoyer &rarr;">',
+    '</form>',
+    '</div>',
 '</section>';
-
 include('./assets/views/footer.php');

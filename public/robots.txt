@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /assets/
+Disallow: ./assets/
+Disallow: ./404.php
 
 Sitemap: https://acuinet.fr/sitemap.xml

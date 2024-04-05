@@ -1,21 +1,12 @@
 .white-section {
-    width: 100vw;
     background: $color-white;
-    margin: auto;
-    text-align: center;
-    padding: 50px 0 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    
     h2 {
-        max-width: $breakpoint-large;
-        padding-bottom: 30px;
+        max-width: $breakpoint-large; 
         color: $color-black;
     }
 
     p {
-        max-width: $breakpoint-large;
         color: $color-font !important;
 
         a {
@@ -37,4 +28,9 @@
         color: $color-white;
         background: $color-black;
     }
+}
+
+
+#footer-call-to-action {
+    padding-top: 30px;
 }

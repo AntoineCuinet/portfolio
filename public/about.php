@@ -1,19 +1,14 @@
 <?php
 $title = 'CUINET';
-$title_page = 'Accueil';
-$description_page = 'Page d\'accueuil';
+$title_page = 'À propos';
+$description = 'Page à propos.';
+$keywords = '';
 
 include('./assets/views/header.php');
-
-echo <<<HTML
-    <section id="professional-career">
-    </section>
-
-    <section id="skills">
-    </section>
-
-    <section id="cv">
-    </section>
-HTML;
-
+include('./assets/views/components/professional-career.php');
+include('./assets/views/components/transition-start.php');
+include('./assets/views/components/skills.php');
+include('./assets/views/components/transition-stop.php');
+include('./assets/views/components/cv.php');
+include('./assets/views/components/footer-call-to-action.php');
 include('./assets/views/footer.php');

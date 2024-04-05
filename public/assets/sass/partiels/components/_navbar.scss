@@ -2,7 +2,7 @@ nav {
     position: fixed;
     z-index: 5;
     top: rem(40); // for infinit headband
-    width: 100%;
+    width: 100vw;
     padding: rem(25) rem(35);
     transition: $transition;
 
@@ -21,7 +21,6 @@ nav {
 
     .first-container {
         max-width: $breakpoint-large;
-        // border-bottom: $border;
         margin: auto;
         display: flex;
         align-items: center;
@@ -44,6 +43,7 @@ nav {
                 margin-left: 10px;
                 font-weight: $font-weight-ber;
                 color: light($color-bg, $color-font);
+                mix-blend-mode: difference;
 
                 @media #{$max-width-s} {
                     font-size: $size-logo-text-mq;
@@ -99,6 +99,7 @@ nav {
                         pointer-events: none;
                         transition: opacity 0.3s 0.15s;
                         background-color: light($color-bg, $color-black);
+                        mix-blend-mode: difference;
                         
 
                         &:nth-child(1) {
@@ -136,7 +137,7 @@ nav {
                 left: 0;
                 height: 100vh;
                 padding: rem(50);
-                background: $color-hamburger;
+                background: $color-navbar;//
                 color: $color-font;
                 @include blur-filter();
                 box-shadow: $box-shadow-right;
@@ -156,12 +157,8 @@ nav {
                 @media #{$max-width-s} {
                     font-size: $size-hamburger;
                     margin: rem(20) 0;
-                    color: $color-font;
+                    margin-left: 0;
                 }
-
-                // &:first-child {
-                //     color: $color-white;
-                // }
 
                 &:last-child {
                     position: relative;
@@ -171,6 +168,9 @@ nav {
                     margin: 0;
                     margin-left: 20px;
                     color: $color-primary;
+                    @media #{$max-width-s} {
+                        margin-left: 0;
+                    }
 
                     &:hover {
                         color: $color-bg;

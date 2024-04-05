@@ -2,12 +2,20 @@
     position: relative;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     max-width: $breakpoint-large;
     flex-wrap: wrap;
     margin: 100px auto;
     text-align: center;
+    padding: 0;
+
+    #index-card-cv {
+        @media #{$max-width-l} {
+            display: none;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -44,6 +52,7 @@
                 }        
     
                 h2 {
+                    padding: 0;
                     font-size: $font-size-xl;
                     color: $color-black;
                     font-weight: bolder;
