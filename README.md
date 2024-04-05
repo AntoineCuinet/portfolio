@@ -9,4 +9,4 @@ A large part of the site is based on CSS effects to show my level in front-end d
 
 ## Conclusion
 
-Go to the site to admire the work: <a href="https://acuinet.fr">acuinet.fr</a>.
+Go to the site to admire the work: <a href="https://acuinet.fr" target="_blanc">acuinet.fr</a>.
