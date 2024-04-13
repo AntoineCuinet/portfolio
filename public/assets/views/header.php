@@ -52,7 +52,7 @@ echo
         '<nav id="navbar">',
             '<div class="first-container">',
                 '<a href="./index.php" class="nav-icon" aria-label="Visit homepage" aria-current="page">',
-                    '<img src="./assets/favicon/favicon.jpeg" alt="Web site icon" width="40">',
+                    '<img src="./assets/favicon/favicon.jpeg" alt="Web site icon" width="40" loading="lazy">',
                     '<span>', $title, '</span>',
                 '</a>',
 

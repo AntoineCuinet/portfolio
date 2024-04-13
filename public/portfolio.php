@@ -20,7 +20,7 @@ echo
 
 '<article class="post-box Particulier">',
 '<a class="portfolio-card" href="article.php?id=2">',
-'<img src="./assets/pictures/img-article/PORTFOLIO_main.png" alt="">',
+'<img src="./assets/pictures/img-article/PORTFOLIO_main.png" alt="img portfolio" loading="lazy">',
 '<h2 class="category">Particulier</h2>',
 '<span class="post-date">26-03-2024</span>',
 '<p class="post-title">Portfolio CUINET Antoine</p>',
@@ -30,7 +30,7 @@ echo
 
 '<article class="post-box Entreprise">',
 '<a class="portfolio-card" href="article.php?id=1">',
-'<img src="./assets/pictures/img-article/RD_main.png" alt="">
+'<img src="./assets/pictures/img-article/RD_main.png" alt="img R&D" loading="lazy">
 <h2 class="category">Entreprise</h2>
 <span class="post-date">13-03-2024</span>
 <p class="post-title">R&Day Informatique 2024</p>
