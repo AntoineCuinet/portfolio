@@ -30,7 +30,7 @@ echo <<<HTML
         <br>
         <!-- Informations sur l'hébergeur du site -->
         <h3>Hébergeur</h3>
-        <p>Nom : <a class="footer-links" href="https://www.ovh.com/" target="_blank">ovh.com</a></p>
+        <p>Nom : <a class="footer-links" href="https://www.ovh.com/" target="_blank" rel="noopener">ovh.com</a></p>
         <br>
         
 

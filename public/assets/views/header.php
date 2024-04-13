@@ -19,9 +19,9 @@ echo
     '<meta charset="UTF-8">',
 	'<meta http-equiv="X-UA-Compatible" content="IE=edge">',
     '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-    '<meta name="description" content="', $description ?? '', '">',
+    '<meta name="description" content="', $description, '">',
     '<meta name="keywords" content="', $keywords, '">',
-    // '<link rel="canonical" href="https://acuinet.fr/" />',
+    '<link rel="canonical" href="https://acuinet.fr/" />',
 
     '<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">',
     '<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">',
@@ -38,7 +38,7 @@ echo
 
     '<meta property="og:image" content="http://acuinet.fr/assets/favicon/favicon.jpeg">',
     '<meta property="og:url" content="http://acuinet.fr/">',
-    '<meta property="og:description" content="', $description_page ?? '', '">',
+    '<meta property="og:description" content="', $description, '">',
     '<meta property="og:title" content="', $title, '">',
     '<meta property="og:type" content="website">',
 
