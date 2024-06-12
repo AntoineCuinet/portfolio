@@ -14,9 +14,9 @@ define ('IS_DEV', true);
 
 /** Constantes : les paramètres de connexion au serveur MariaDB */
 define ('BD_NAME', 'Portfolio');
-define ('BD_USER', 'adminPortfolio');
-define ('BD_PASS', 'adminPortfolio');
-define ('BD_SERVER', 'localhost');
+define ('BD_USER', 'acuinezadmin');
+define ('BD_PASS', 'La2Guerre0De2La4Richesse');
+define ('BD_SERVER', 'localhost'); // 'localhost' ou 'acuinezadmin.mysql.db'
 
 // Définit le fuseau horaire par défaut à utiliser. Disponible depuis PHP 5.1
 date_default_timezone_set('Europe/Paris');
