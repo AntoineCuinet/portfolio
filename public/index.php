@@ -1,4 +1,15 @@
 <?php
+
+// Chargement des bibliothèques de fonctions
+require_once('./assets/views/library_app.php');
+require_once('./assets/views/library_general.php');
+
+// Bufferisation des sorties
+ob_start();
+
+// Démarrage ou reprise de la session
+session_start();
+
 $title = 'CUINET';
 $title_page = 'Accueil';
 $description = 'Page d\'accueuil';
@@ -43,3 +54,41 @@ echo
 
 include('./assets/views/components/footer-call-to-action.php');
 include('./assets/views/footer.php');
+
+
+// Envoi du buffer
+ob_end_flush();
+
+
+// /*********************************************************
+//  *
+//  * Définitions des fonctions locales de la page
+//  *
+//  *********************************************************/
+// //_______________________________________________________________
+// /**
+//  * Affichage du contenu principal de la page
+//  *
+//  * @return  void
+//  */
+// function affContenuL(): void {
+
+//     // Connexion au serveur de BD
+//     $bd = bdConnect();
+
+//     // génération des 3 derniers articles
+//     $sql = 'SELECT id
+//              FROM article
+//              ORDER BY date DESC
+//              LIMIT 0, 3';
+
+//     $result = bdSendRequest($bd, $sql);
+
+//     // Fermeture de la connexion au serveur de BdD
+//     mysqli_close($bd);
+
+
+//     echo '<main>';
+//     echo 'coucou';
+//     echo '</main>';
+// }
