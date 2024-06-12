@@ -1,4 +1,15 @@
 <?php
+
+// Chargement des bibliothèques de fonctions
+require_once('./assets/views/library_app.php');
+require_once('./assets/views/library_general.php');
+
+// Bufferisation des sorties
+ob_start();
+
+// Démarrage ou reprise de la session
+session_start();
+
 $title = 'CUINET';
 $title_page = 'Portfolio';
 $description = 'Page présentant mon portfolio';
@@ -11,35 +22,55 @@ echo
 '<h2>', $title_page, '</h2>',
 
 '<div class="post-filter">',
-'<span class="filter-item active-filter" data-filter="all">Tous</span>',
-'<span class="filter-item" data-filter="Particulier">Particulier</span>',
-'<span class="filter-item" data-filter="Entreprise">Entreprise</span>',
+    '<span class="filter-item active-filter" data-filter="all">Tous</span>',
+    '<span class="filter-item" data-filter="Particulier">Particulier</span>',
+    '<span class="filter-item" data-filter="Entreprise">Entreprise</span>',
 '</div>',
 
-'<div class="post">',
+'<div class="post">';
 
-'<article class="post-box Particulier">',
-'<a class="portfolio-card" href="article.php?id=2">',
-'<img src="./assets/pictures/img-article/PORTFOLIO_main.png" alt="img portfolio" loading="lazy">',
-'<h2 class="category">Particulier</h2>',
-'<span class="post-date">26-03-2024</span>',
-'<p class="post-title">Portfolio CUINET Antoine</p>',
-'<p class="post-description">Portfolio de Antoine CUINET, un développeur web passionné.</p>',
-'</a>',
-'</article>',
 
-'<article class="post-box Entreprise">',
-'<a class="portfolio-card" href="article.php?id=1">',
-'<img src="./assets/pictures/img-article/RD_main.png" alt="img R&D" loading="lazy">
-<h2 class="category">Entreprise</h2>
-<span class="post-date">13-03-2024</span>
-<p class="post-title">R&Day Informatique 2024</p>
-<p class="post-description">Site vitrine réalisé pour la Journée Recherche et Développement (R&D ou encore R&Day) informatique 2024 des étudiants deuxièmes années de l\'Université de Franche-comté.</p>',
-'</a>',
-'</article>',
+// Connexion au serveur de BD
+$bd = bdConnect();
 
-'</div>',
+$sql = 'SELECT id, titre, date, type, resume
+        FROM article;';
+
+$result = bdSendRequest($bd, $sql);
+
+// Fermeture de la connexion au serveur de BdD
+mysqli_close($bd);
+
+
+while($tab = mysqli_fetch_assoc($result)) {
+
+    if($tab['type'] == 1) {
+        $type = 'Particulier';
+    } else {
+        $type = 'Entreprise';
+    }
+
+    // Chiffrement de l'id pour le passage dans l'URL
+    $id_chiffre = chiffrerSignerURL($tab['id']);
+
+    echo 
+    '<article class="post-box ', $type, '">',
+        '<a class="portfolio-card" href="./article.php?id=',  $id_chiffre, '">',
+            '<img src="./assets/pictures/img-article/', $tab['id'], '.png" alt="image du site ', $tab['titre'], '" loading="lazy">',
+            '<h2 class="category">', $type, '</h2>',
+            '<span class="post-date">', $tab['date'], '</span>',
+            '<p class="post-title">', $tab['titre'], '</p>',
+            '<p class="post-description">', $tab['resume'], '</p>',
+        '</a>',
+    '</article>';
+}
+
+
+echo '</div>',
 '</section>';
 
 include('./assets/views/components/footer-call-to-action.php');
 include('./assets/views/footer.php');
+
+// Envoi du buffer
+ob_end_flush();

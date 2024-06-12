@@ -451,7 +451,7 @@ function verifDroitEcriture(string $uploadDir): void {
  */
 function verifGet(string $cle, string $page): int {
     if (! parametresControle('get', ["$cle"])){
-        affErreur('Il faut utiliser une URL de la forme : http://..../php/' . $page . '.php?' . $cle . '=XXX');
+        affErreur('Il faut utiliser une URL de la forme : https://acuinet.fr/' . $page . '.php?' . $cle . '=XXX');
         exit(1); // ==> fin de la fonction
     }
 

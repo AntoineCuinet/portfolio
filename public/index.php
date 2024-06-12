@@ -35,19 +35,33 @@ echo
     '<h2>Quelques réalisations</h2>',
     '<div class="container-slider">',
         '<i id="left" class="bx bx-chevron-left"></i>',
-        '<ul class="carousel">',
-            '<li>',
-                '<img src="./assets/pictures/img-article/PORTFOLIO_main.png" alt="img portfolio" draggable="false" loading="lazy">',
-                '<h2>Portfolio CUINET Antoine</h2>',
-                '<a class="btn" href="./article.php?id=1">Découvrir</a>',
-            '</li>',
+        '<ul class="carousel">';
 
-            '<li>',
-                '<img src="./assets/pictures/img-article/RD_main.png" alt="img R&D" draggable="false" loading="lazy">',
-                '<h2>R&Day Informatique 2024</h2>',
-                '<a class="btn" href="./article.php?id=2">Découvrir</a>',
-            '</li>',
-        '</ul>',
+// Connexion au serveur de BD
+$bd = bdConnect();
+
+$sql = 'SELECT id, titre
+        FROM article;';
+
+$result = bdSendRequest($bd, $sql);
+
+// Fermeture de la connexion au serveur de BdD
+mysqli_close($bd);
+
+
+while($tab = mysqli_fetch_assoc($result)) {
+
+    // Chiffrement de l'id pour le passage dans l'URL
+    $id_chiffre = chiffrerSignerURL($tab['id']);
+
+    echo '<li>',
+            '<img src="./assets/pictures/img-article/', $tab['id'], '.png" alt="image du site ', $tab['titre'], '" draggable="false" loading="lazy">',
+            '<h2>', $tab['titre'], '</h2>',
+            '<a class="btn" href="./article.php?id=',  $id_chiffre, '">Découvrir</a>',
+        '</li>';
+}
+            
+    echo '</ul>',
         '<i id="right" class="bx bx-chevron-right"></i>',
     '</div>',
 '</section>';
@@ -58,37 +72,3 @@ include('./assets/views/footer.php');
 
 // Envoi du buffer
 ob_end_flush();
-
-
-// /*********************************************************
-//  *
-//  * Définitions des fonctions locales de la page
-//  *
-//  *********************************************************/
-// //_______________________________________________________________
-// /**
-//  * Affichage du contenu principal de la page
-//  *
-//  * @return  void
-//  */
-// function affContenuL(): void {
-
-//     // Connexion au serveur de BD
-//     $bd = bdConnect();
-
-//     // génération des 3 derniers articles
-//     $sql = 'SELECT id
-//              FROM article
-//              ORDER BY date DESC
-//              LIMIT 0, 3';
-
-//     $result = bdSendRequest($bd, $sql);
-
-//     // Fermeture de la connexion au serveur de BdD
-//     mysqli_close($bd);
-
-
-//     echo '<main>';
-//     echo 'coucou';
-//     echo '</main>';
-// }
