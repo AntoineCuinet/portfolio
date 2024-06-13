@@ -76,4 +76,7 @@ ob_end_flush();
 // <br>
 // <br>
 
-// voir le site <a class="footer-links" href="https://rnday.ofni.asso.fr/index.php" target="_blank">ici: https://rnday.ofni.asso.fr/index.php</a>.
+// Voir le site <a class="footer-links" href="https://rnday.ofni.asso.fr/" target="_blank">ici: https://rnday.ofni.asso.fr/</a>.
+// <br>
+// <br>
+// Retrouvez tout les codes sources sur <a class="footer-links" href="https://github.com/AntoineCuinet" target="_blank">mon Github</a>.
