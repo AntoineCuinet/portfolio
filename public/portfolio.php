@@ -34,7 +34,7 @@ echo
 $bd = bdConnect();
 
 $sql = 'SELECT id, titre, date, type, resume
-        FROM article
+        FROM article_portfolio
         ORDER BY date DESC;';
 
 $result = bdSendRequest($bd, $sql);

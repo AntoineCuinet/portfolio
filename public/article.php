@@ -29,7 +29,7 @@ echo
 $bd = bdConnect();
 
 $sql = "SELECT id, titre, contenu, date, type
-        FROM article
+        FROM article_portfolio
         WHERE id = '$id'";
 
 $res = bdSendRequest($bd, $sql);
