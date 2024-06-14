@@ -54,12 +54,12 @@ echo <<<HTML
         <h3>6. Modifications de la politique de confidentialité</h3>
         <p>Nous nous réservons le droit de mettre à jour notre politique de confidentialité à tout moment. Les modifications seront publiées sur cette page avec la date de la dernière mise à jour.</p>
         <br>
-        <h3>7. Nous contacter</h3>
+        <h3 id="cookie">7. Nous contacter</h3>
         <p>Si vous avez des questions concernant notre politique de confidentialité, vous pouvez nous contacter à l'adresse e-mail suivante : <a class="footer-links" href="mailto:antoine@acuinet.fr">antoine@acuinet.fr</a>.</p>
         <br>
 
 
-        <h2 id="cookies">Cookies</h2>
+        <h2>Cookies</h2>
         <h3>1. Qu'est-ce qu'un cookie ?</h3>
         <p>Un cookie est un petit fichier texte stocké sur votre ordinateur ou appareil mobile lorsque vous visitez notre site Web. Les cookies nous aident à améliorer votre expérience de navigation et à comprendre comment vous utilisez notre site.</p>
         <br>

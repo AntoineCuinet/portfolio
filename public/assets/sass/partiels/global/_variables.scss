@@ -61,11 +61,13 @@ $size-404-phone: 35px;
 // ========================================================================
 // Breakpoints - Layout
 // ========================================================================
+$breakpoint-xsmall: 430px !default;
 $breakpoint-small: 800px !default;
 $breakpoint-medium: 960px !default;
 $breakpoint-large: 1200px !default;
 $breakpoint-xlarge: 1600px !default;
 
+$max-width-xs: "screen and (max-width: #{$breakpoint-xsmall})";
 $max-width-s: "screen and (max-width: #{$breakpoint-small})";
 $max-width-m: "screen and (max-width: #{$breakpoint-medium})";
 $max-width-l: "screen and (max-width: #{$breakpoint-large})";

@@ -53,8 +53,8 @@ echo
     '<header>',
         '<div class="infinit-part">',
             '<div class="container-infinit-part">',
-                '<span class="txt">Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>',
-                '<span class="txt">Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Site en <span class="it">construction</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>',
+                '<span class="txt">Bienvenue sur le portfolio de <span class="it">CUINET Antoine</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Demandez un devis <span class="it">gratuitement</span> pour votre projet web&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Bienvenue sur le portfolio de <span class="it">CUINET Antoine</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Demandez un devis <span class="it">gratuitement</span> pour votre projet web&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>',
+                '<span class="txt">Bienvenue sur le portfolio de <span class="it">CUINET Antoine</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Demandez un devis <span class="it">gratuitement</span> pour votre projet web&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Bienvenue sur le portfolio de <span class="it">CUINET Antoine</span>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Demandez un devis <span class="it">gratuitement</span> pour votre projet web&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</span>',
             '</div>',
         '</div>',
 

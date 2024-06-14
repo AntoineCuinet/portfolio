@@ -445,6 +445,58 @@ footer .footer-legal {
   transition: opacity 0.4s ease-out;
 }
 
+#cookie-popup {
+  position: fixed;
+  z-index: 9999;
+  bottom: 30px;
+  left: 30px;
+  background: #FFFFF0;
+  max-width: 365px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px 15px 20px 15px;
+  border: 3px solid rgb(200, 63, 52);
+  box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
+}
+@media screen and (max-width: 430px) {
+  #cookie-popup {
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+    width: 90%;
+    bottom: 10px;
+  }
+}
+#cookie-popup h3 {
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+#cookie-popup p {
+  font-size: 1rem;
+  color: #333;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 430px) {
+  #cookie-popup p {
+    font-size: 0.75rem;
+  }
+}
+#cookie-popup .cookie-links {
+  text-decoration: none;
+  cursor: pointer;
+  color: #FFFFF0;
+  background: rgb(200, 63, 52);
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 30px rgba(200, 63, 52, 0.3);
+  transition: all 0.4s ease-out;
+  border: 1px solid #141619;
+}
+#cookie-popup .cookie-links:hover {
+  background: rgb(150, 49, 43);
+}
+
 .infinit-part {
   width: 100vw;
   padding: 0.5rem 0;

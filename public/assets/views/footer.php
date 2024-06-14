@@ -3,9 +3,19 @@ echo
 '</main>',
 '<div id="to-top-btn">',
     '<i class="bx bx-up-arrow-circle"></i>',
-'</div>',
+'</div>';
 
-'<footer>',
+
+if(! isset($_COOKIE['cookie-accept'])) {
+    echo '<div id="cookie-popup">',
+        '<h3>Cookies &#127850;</h3>',
+        '<p>Ce site utilise les cookies afin d\'améliorer l\'expérience utilisateur, analyser la performance et mesurer le trafic. Les données utilisateurs sont strictement anonymes. <a href="./legal.php#cookie">En savoir plus</a></p>',
+        '<a class="cookie-links" href="./assets/views/components/accept_cookie.php">Accepter</a>',
+        '<a class="cookie-links" href="./assets/views/components/refus_cookie.php">Refuser</a>',
+    '</div>';
+}
+
+echo '<footer>',
     '<div class="footer-container">',
         '<div class="bloc">',
             '<h3>Informations</h3>',
