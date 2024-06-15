@@ -34,17 +34,17 @@ h1 {
 
 ::selection {
   color: #141619;
-  background: #FFFFF0;
+  background: #fffff5;
 }
 
 ::-moz-selection {
   color: #141619;
-  background: #FFFFF0;
+  background: #fffff5;
 }
 
 ::-webkit-selection {
   color: #141619;
-  background: #FFFFF0;
+  background: #fffff5;
 }
 
 html {
@@ -115,7 +115,7 @@ header {
   position: absolute;
   left: 5%;
   top: 30vh;
-  color: #FFFFF0;
+  color: #fffff5;
 }
 @media screen and (max-width: 800px) {
   .landing-page h2 {
@@ -159,7 +159,7 @@ section {
   padding: 100px 0 100px 0;
 }
 section h2 {
-  color: #FFFFF0;
+  color: #fffff5;
   padding-bottom: 30px;
 }
 @media screen and (max-width: 800px) {
@@ -296,7 +296,7 @@ footer .footer-legal {
 }
 #professional-career .timeline .checkpoint div h3 {
   padding-bottom: 0.5em;
-  color: #FFFFF0;
+  color: #fffff5;
 }
 #professional-career .timeline .checkpoint div h4 {
   padding-bottom: 0.5em;
@@ -407,7 +407,7 @@ footer .footer-legal {
 }
 
 .mentions-legales h1 {
-  color: #FFFFF0;
+  color: #fffff5;
   font-size: 30px;
 }
 
@@ -450,7 +450,7 @@ footer .footer-legal {
   z-index: 9999;
   bottom: 30px;
   left: 30px;
-  background: #FFFFF0;
+  background: #fffff5;
   max-width: 365px;
   border-radius: 15px;
   text-align: center;
@@ -484,7 +484,7 @@ footer .footer-legal {
 #cookie-popup .cookie-links {
   text-decoration: none;
   cursor: pointer;
-  color: #FFFFF0;
+  color: #fffff5;
   background: rgb(200, 63, 52);
   padding: 5px 10px;
   margin: 10px;
@@ -609,7 +609,7 @@ nav .first-container .nav-icon span {
   font-size: 1.875rem;
   margin-left: 10px;
   font-weight: bolder;
-  color: #FFFFF0;
+  color: #fffff5;
   mix-blend-mode: difference;
 }
 @media screen and (max-width: 800px) {
@@ -662,7 +662,7 @@ nav .first-container .main-navlinks .hamburger {
     position: absolute;
     pointer-events: none;
     transition: opacity 0.3s 0.15s;
-    background-color: #FFFFF0;
+    background-color: #fffff5;
     mix-blend-mode: difference;
   }
   nav .first-container .main-navlinks .hamburger span:nth-child(1) {
@@ -828,7 +828,7 @@ nav .first-container .navlinks-container a:hover::after {
 }
 
 .footer-links:hover {
-  color: #FFFFF0;
+  color: #fffff5;
 }
 
 .section-cards {
@@ -897,7 +897,7 @@ nav .first-container .navlinks-container a:hover::after {
   position: relative;
   width: 100vw;
   height: 100px;
-  background: #FFFFF0;
+  background: #fffff5;
   padding: 50px auto;
   border: none;
 }
@@ -922,24 +922,24 @@ nav .first-container .navlinks-container a:hover::after {
 }
 .end-transition-section .overlay::after, .transition-section .overlay::after {
   border-top-right-radius: 150px 50px;
-  background: #FFFFF0;
+  background: #fffff5;
 }
 
 .end-transition-section {
   background: rgb(7, 7, 7);
 }
 .end-transition-section .overlay {
-  background: #FFFFF0;
+  background: #fffff5;
 }
 .end-transition-section .overlay::before, .end-transition-section .overlay::after {
-  background: #FFFFF0;
+  background: #fffff5;
 }
 .end-transition-section .overlay::after {
   background: rgb(7, 7, 7);
 }
 
 .white-section {
-  background: #FFFFF0;
+  background: #fffff5;
 }
 .white-section h2 {
   max-width: 1200px;
@@ -952,15 +952,15 @@ nav .first-container .navlinks-container a:hover::after {
   color: #333 !important;
 }
 .white-section ::selection {
-  color: #FFFFF0;
+  color: #fffff5;
   background: #141619;
 }
 .white-section ::-moz-selection {
-  color: #FFFFF0;
+  color: #fffff5;
   background: #141619;
 }
 .white-section ::-webkit-selection {
-  color: #FFFFF0;
+  color: #fffff5;
   background: #141619;
 }
 
@@ -991,7 +991,7 @@ nav .first-container .navlinks-container a:hover::after {
   height: 50px;
   width: 50px;
   font-size: 40px;
-  background: #FFFFF0;
+  background: #fffff5;
   text-align: center;
   line-height: 50px;
   border-radius: 50%;
@@ -1042,7 +1042,7 @@ nav .first-container .navlinks-container a:hover::after {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #FFFFF0;
+  background: #fffff5;
   border-top-left-radius: 15px;
   border-top-right-radius: 85px 35px;
   border-bottom-left-radius: 85px 35px;
@@ -1110,7 +1110,7 @@ nav .first-container .navlinks-container a:hover::after {
 .login-container .wrapper h2 {
   font-size: 36px;
   text-align: center;
-  color: #FFFFF0;
+  color: #fffff5;
 }
 .login-container .wrapper h3 {
   padding-top: 30px;
@@ -1138,7 +1138,7 @@ nav .first-container .navlinks-container a:hover::after {
   font-size: 22px;
 }
 .login-container .wrapper form .alert-green p {
-  color: #FFFFF0;
+  color: #fffff5;
   text-align: center;
 }
 
@@ -1230,7 +1230,7 @@ nav .first-container .navlinks-container a:hover::after {
   color: rgb(134, 44, 38);
 }
 .form-field .alert p {
-  color: #FFFFF0;
+  color: #fffff5;
 }
 
 iframe {
@@ -1265,7 +1265,7 @@ iframe {
   cursor: pointer;
 }
 .post-filter .active-filter {
-  color: #FFFFF0;
+  color: #fffff5;
   background: #333;
   padding: 5px 10px;
   border-radius: 5px;
@@ -1297,10 +1297,10 @@ iframe {
   margin: 0;
 }
 .post .post-box .portfolio-card:hover .post-title {
-  color: #FFFFF0 !important;
+  color: #fffff5 !important;
 }
 .post .post-box .portfolio-card:hover .post-description {
-  color: #FFFFF0 !important;
+  color: #fffff5 !important;
 }
 .post .post-box img {
   width: 100%;
@@ -1418,7 +1418,7 @@ iframe {
 
 .btn-download {
   z-index: 2;
-  background: #FFFFF0;
+  background: #fffff5;
   position: fixed;
   bottom: 3%;
   left: 3%;
@@ -1430,7 +1430,7 @@ iframe {
 }
 .btn-download:hover {
   background: rgb(200, 63, 52);
-  color: #FFFFF0 !important;
+  color: #fffff5 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
