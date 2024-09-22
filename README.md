@@ -1,4 +1,4 @@
-# 🌐 Site Web
+# 🌐 Portfolio personnel
 
 Bienvenue dans le dépôt du site web de mon portfolio personnel !
 Sur ce site, vous trouverez mon parcours professionnel, quelques projets réalisés, une page de contact et bien d'autres !
