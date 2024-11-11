@@ -1,3 +1,5 @@
 node_modules/
 .DS_Store
 .idea/
+
+public/assets/views/library_app.php
